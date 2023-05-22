@@ -355,7 +355,7 @@ button {
   .banner__wrapper {
     height: 600px;
     position: relative;
-    background-image: url("/img/background/banner-main_mobile.png");
+    background-image: url("../img/background/banner-main_mobile.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center; }
@@ -363,7 +363,7 @@ button {
       .banner__wrapper {
         height: auto;
         padding-top: 56%;
-        background-image: url("/img/background/banner-main.png"); } }
+        background-image: url("../img/background/banner-main.png"); } }
   .banner__content {
     position: absolute;
     left: 0;
@@ -483,7 +483,7 @@ button {
       left: -1px; }
 
 .about-us {
-  background-image: url("/img/background/about_mobile.png");
+  background-image: url("../img/background/about_mobile.png");
   background-repeat: no-repeat;
   background-position: right top;
   background-size: auto 435px;
@@ -491,7 +491,7 @@ button {
   margin-bottom: 50px; }
   @media (min-width: 991px) {
     .about-us {
-      background-image: url("/img/background/about.png");
+      background-image: url("../img/background/about.png");
       background-position: right center;
       background-size: contain; } }
   .about-us__content {
@@ -509,7 +509,7 @@ button {
         padding: 100px 0; } }
 
 .life {
-  background-image: url("/img/background/bg_orange_mobile.png");
+  background-image: url("../img/background/bg_orange_mobile.png");
   background-repeat: no-repeat;
   background-position: center bottom;
   background-size: contain;
@@ -518,7 +518,7 @@ button {
   margin-bottom: 70px; }
   @media (min-width: 768px) {
     .life {
-      background-image: url("/img/background/bg_orange.png");
+      background-image: url("../img/background/bg_orange.png");
       background-position: center;
       padding: 60px 0 60px; } }
   @media (min-width: 1200px) {
@@ -551,7 +551,7 @@ button {
       position: absolute;
       width: 200px;
       height: 253px;
-      background-image: url("/img/images/dog.png");
+      background-image: url("../img/images/dog.png");
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -686,7 +686,7 @@ button {
     left: -1px; }
 
 .seaside-scoop {
-  background-image: url("/img/background/bg_red_mobile.png");
+  background-image: url("../img/background/bg_red_mobile.png");
   background-size: contain;
   background-position: center bottom;
   background-repeat: no-repeat;
@@ -694,13 +694,13 @@ button {
   padding: 140px 0 40px; }
   @media (min-width: 768px) {
     .seaside-scoop {
-      background-image: url("/img/background/bg_red.png");
+      background-image: url("../img/background/bg_red.png");
       background-size: auto 100%;
       background-position: left center;
       padding: 90px 0 140px; } }
   @media (min-width: 1500px) {
     .seaside-scoop {
-      background: url("/img/background/pattern.png"), linear-gradient(90deg, #ff5762 0%, #ff7357 100%);
+      background: url("../img/background/pattern.png"), linear-gradient(90deg, #ff5762 0%, #ff7357 100%);
       background-repeat: repeat;
       background-size: auto;
       background-position: left top;
@@ -848,7 +848,7 @@ button {
       left: -1px; }
 
 .career {
-  background-image: url("/img/background/footer_mobile.png");
+  background-image: url("../img/background/footer_mobile.png");
   background-repeat: no-repeat;
   background-position: right center;
   background-size: calc(100% - 16px) 100%;
@@ -857,7 +857,7 @@ button {
   text-align: center; }
   @media (min-width: 991px) {
     .career {
-      background-image: url("/img/background/footer.png");
+      background-image: url("../img/background/footer.png");
       background-size: contain;
       padding: 60px 0;
       margin: 10px 0; } }
