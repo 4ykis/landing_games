@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="img/logo_sm.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
+    <link rel="stylesheet" href="./style/css/main.css">
+
+    <!-- All icons to use -->
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none !important">
+        <symbol id="arrow-big" viewBox="0 0 15 28">
+            <path fill="transparent"
+                d="M12.1364 2.02951L2.62076 13.1296C2.23554 13.5789 2.2355 14.2421 2.62066 14.6915L12.1348 25.7929"
+                stroke="currentColor" stroke-width="4" stroke-linecap="round" />
+        </symbol>
+
+        <symbol id="arrow-circle" fill="currentColor" viewBox="0 0 24 24">
+            <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM12.9007 12.1334C13.0072 12.0345 13.0072 11.8659 12.9007 11.767L10.1899 9.24979C9.88632 8.96794 9.86875 8.49339 10.1506 8.18986C10.4325 7.88632 10.907 7.86875 11.2105 8.1506L13.9214 10.6678C14.667 11.3602 14.667 12.5402 13.9214 13.2326L11.2105 15.7498C10.907 16.0316 10.4325 16.0141 10.1506 15.7105C9.86875 15.407 9.88632 14.9325 10.1899 14.6506L12.9007 12.1334Z" />
+        </symbol>
+
+        <symbol id="facebook" viewBox="0 0 6 11">
+            <path fill="currentColor"
+                d="M5.60685 6.14078L5.91781 4.16505H3.9726V2.8835C3.9726 2.34297 4.24438 1.81553 5.11562 1.81553H6V0.133495C6 0.133495 5.1974 0 4.43 0C2.82795 0 1.78082 0.946214 1.78082 2.65922V4.16505H0V6.14078H1.78082V10.917C2.507 11.0277 3.24643 11.0277 3.9726 10.917V6.14078H5.60685Z" />
+        </symbol>
+
+        <symbol id="instagram" viewBox="0 0 14 14">
+            <path fill="currentColor"
+                d="M6.82215 1.22805C8.64495 1.22805 8.86081 1.23604 9.57767 1.268C10.2439 1.29731 10.6037 1.40919 10.8435 1.50242C11.1606 1.62496 11.3898 1.77414 11.627 2.01122C11.8668 2.25097 12.0134 2.4774 12.136 2.7944C12.2293 3.03415 12.3412 3.39644 12.3705 4.05974C12.4025 4.77899 12.4105 4.99476 12.4105 6.81419C12.4105 8.63628 12.4025 8.85205 12.3705 9.56863C12.3412 10.2346 12.2293 10.5942 12.136 10.834C12.0134 11.151 11.8642 11.3801 11.627 11.6172C11.3871 11.8569 11.1606 12.0034 10.8435 12.1259C10.6037 12.2192 10.2412 12.3311 9.57767 12.3604C8.85814 12.3923 8.64229 12.4003 6.82215 12.4003C4.99935 12.4003 4.78349 12.3923 4.06663 12.3604C3.4004 12.3311 3.04064 12.2192 2.80079 12.1259C2.48367 12.0034 2.25449 11.8542 2.01731 11.6172C1.77747 11.3774 1.6309 11.151 1.50831 10.834C1.41504 10.5942 1.30311 10.2319 1.2738 9.56863C1.24182 8.84939 1.23382 8.63361 1.23382 6.81419C1.23382 4.9921 1.24182 4.77632 1.2738 4.05974C1.30311 3.39377 1.41504 3.03415 1.50831 2.7944C1.6309 2.4774 1.78013 2.24831 2.01731 2.01122C2.25715 1.77148 2.48367 1.62496 2.80079 1.50242C3.04064 1.40919 3.40306 1.29731 4.06663 1.268C4.78349 1.23604 4.99935 1.22805 6.82215 1.22805ZM6.82215 0C4.97003 0 4.73819 0.00799162 4.01066 0.0399581C3.28581 0.0719246 2.78747 0.189135 2.35575 0.356959C1.90538 0.532775 1.5243 0.764531 1.14588 1.14547C0.7648 1.52374 0.532952 1.90467 0.357068 2.3522C0.189178 2.78641 0.0719222 3.28189 0.0399432 4.00646C0.00796422 4.73637 -3.05176e-05 4.96812 -3.05176e-05 6.81951C-3.05176e-05 8.67091 0.00796422 8.90266 0.0399432 9.6299C0.0719222 10.3545 0.189178 10.8526 0.357068 11.2842C0.532952 11.7344 0.7648 12.1153 1.14588 12.4936C1.5243 12.8718 1.90538 13.1063 2.35309 13.2794C2.78747 13.4472 3.28314 13.5644 4.008 13.5964C4.73552 13.6284 4.96737 13.6364 6.81948 13.6364C8.6716 13.6364 8.90345 13.6284 9.63097 13.5964C10.3558 13.5644 10.8542 13.4472 11.2859 13.2794C11.7336 13.1063 12.1147 12.8718 12.4931 12.4936C12.8715 12.1153 13.106 11.7344 13.2792 11.2868C13.4471 10.8526 13.5644 10.3571 13.5964 9.63256C13.6283 8.90533 13.6363 8.67357 13.6363 6.82218C13.6363 4.97079 13.6283 4.73903 13.5964 4.01179C13.5644 3.28722 13.4471 2.78907 13.2792 2.35753C13.1113 1.90467 12.8795 1.52374 12.4984 1.14547C12.12 0.767195 11.7389 0.532775 11.2912 0.359623C10.8568 0.191799 10.3612 0.0745884 9.6363 0.042622C8.90611 0.00799162 8.67426 0 6.82215 0Z" />
+            <path fill="currentColor"
+                d="M6.82215 3.31652C4.88742 3.31652 3.31779 4.88554 3.31779 6.81951C3.31779 8.75349 4.88742 10.3225 6.82215 10.3225C8.75688 10.3225 10.3265 8.75349 10.3265 6.81951C10.3265 4.88554 8.75688 3.31652 6.82215 3.31652ZM6.82215 9.0918C5.56697 9.0918 4.54898 8.0742 4.54898 6.81951C4.54898 5.56483 5.56697 4.54723 6.82215 4.54723C8.07732 4.54723 9.09532 5.56483 9.09532 6.81951C9.09532 8.0742 8.07732 9.0918 6.82215 9.0918Z" />
+            <path fill="currentColor"
+                d="M11.2832 3.17798C11.2832 3.63083 10.9155 3.99579 10.4651 3.99579C10.0121 3.99579 9.64696 3.62817 9.64696 3.17798C9.64696 2.72512 10.0147 2.36017 10.4651 2.36017C10.9155 2.36017 11.2832 2.72778 11.2832 3.17798Z" />
+        </symbol>
+
+        <symbol id="linkedin" viewBox="0 0 14 14">
+            <path fill="currentColor"
+                d="M3.13375 13.125H0.23125V4.36226H3.13375V13.125ZM1.68094 3.16694C0.752813 3.16694 0 2.44624 0 1.57612C6.64312e-09 1.15817 0.177098 0.757343 0.492335 0.461808C0.807572 0.166274 1.23513 0.000244141 1.68094 0.000244141C2.12675 0.000244141 2.5543 0.166274 2.86954 0.461808C3.18478 0.757343 3.36188 1.15817 3.36188 1.57612C3.36188 2.44624 2.60875 3.16694 1.68094 3.16694ZM13.9969 13.125H11.1006V8.85933C11.1006 7.84272 11.0787 6.53901 9.59156 6.53901C8.0825 6.53901 7.85125 7.64351 7.85125 8.78608V13.125H4.95188V4.36226H7.73562V5.55757H7.77625C8.16375 4.86909 9.11031 4.14253 10.5225 4.14253C13.46 4.14253 14 5.95601 14 8.31147V13.125H13.9969Z" />
+        </symbol>
+
+        <symbol id="menu-icon" viewBox="0 0 32 32">
+            <g fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M24 12H8V10H24V12ZM24 17H8V15H24V17ZM24 22H8V20H24V22Z"
+                    fill="#FF5562" />
+                <rect x="0.5" y="0.5" width="31" height="31" rx="15.5" stroke="#FF5562" />
+            </g>
+        </symbol>
+
+        <symbol id="cross" viewBox="0 0 16 17">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.4 8.3707V0.970703H8.6V8.3707H16V9.5707H8.6V16.9707H7.4V9.5707H0L0 8.3707H7.4Z" fill="currentColor"/>
+        </symbol>
+    </svg>
+
+    <title>Beach Boom</title>
+</head>
+
+<body id="top-page">
+    <div class="page">
+        <header class="header">
+            <div class="container">
+                <div class="logo hide-lg hide-md">
+                    <div class="logo__block">
+                        <img src="img/logo.svg" alt="BeachBum" class="logo__image">
+                    </div>
+                </div>
+
+                <div class="menu js--menu">
+                    <div class="logo">
+                        <div class="logo__block">
+                            <img src="img/logo.svg" alt="BeachBum" class="logo__image">
+                        </div>
+                    </div>
+
+                    <nav class="nav menu__nav">
+                        <ul class="nav__list">
+                            <li class="nav__item">
+                                <a href="#about_us" class="nav__link">About us</a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a href="#our_games" class="nav__link">Our Games</a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a href="#life_at_the_beach" class="nav__link">Life at the Beach</a>
+                            </li>
+
+                            <li class="nav__item">
+                                <a href="#careers" class="nav__link">Careers</a>
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <div class="menu__socials socials">
+                        <a href="https://www.instagram.com/" class="socials__link btn-circle">
+                            <span class="socials__icon">
+                                <svg width="14" height="14">
+                                    <use xlink:href="#instagram" />
+                                </svg>
+                            </span>
+                        </a>
+
+                        <a href="https://www.facebook.com/" class="socials__link btn-circle">
+                            <span class="socials__icon">
+                                <svg width="6" height="11">
+                                    <use xlink:href="#facebook" />
+                                </svg>
+                            </span>
+                        </a>
+
+                        <a href="https://www.linkedin.com/" class="socials__link btn-circle">
+                            <span class="socials__icon">
+                                <svg width="14" height="14">
+                                    <use xlink:href="#linkedin" />
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+
+                <button class="header__toggler hide-md hide-lg js-menu-togler">
+                    <svg width="32" height="32">
+                        <use xlink:href="#menu-icon" />
+                    </svg>
+                </button>
+            </div>
+        </header>
+
+        <section class="banner" id="banner">
+            <div class="container">
+                <div class="row">
+                    <div class="banner__wrapper">
+                        <div class="banner__content">
+                            <h1 class="banner__title">We Make<br /> Timeless<br /> Games</h1>
+
+                            <button class="btn btn--white-red btn--big">
+                                <span class="btn__text"> Join Us!</span>
+                                <svg class="btn__icon">
+                                    <use xlink:href="#arrow-circle" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="our_games">
+            <div class="container">
+                <h2 class="section__title">
+                    Our <span class="clr-red">Games</span>
+                </h2>
+                <div class="section__slider-game">
+                    <div class="slider-game js-slider-games">
+                        <div class="slider-game__slide">
+                            <a href class="slider-game__link">
+                                <picture>
+                                    <source media="(min-width:991px)" srcset="/img/games/game_1.png">
+                                    <img class="slider-game__img" src="/img/games/game_1_mob.png" alt="Play Now">
+                                </picture>
+                                <div class="btn btn--small slider-game__btn">
+                                    <span class="btn__text">Play Now</span>
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#arrow-circle" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="slider-game__slide">
+                            <a href class="slider-game__link">
+                                <picture>
+                                    <source media="(min-width:991px)" srcset="/img/games/game_4.png">
+                                    <img class="slider-game__img" src="/img/games/game_2_mob.png" alt="Play Now">
+                                </picture>
+                                <div class="btn btn--small slider-game__btn">
+                                    <span class="btn__text">Play Now</span>
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#arrow-circle" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="slider-game__slide">
+                            <a href class="slider-game__link">
+                                <picture>
+                                    <source media="(min-width:991px)" srcset="/img/games/game_1.png">
+                                    <img class="slider-game__img" src="/img/games/game_1_mob.png" alt="Play Now">
+                                </picture>
+                                <div class="btn btn--small slider-game__btn">
+                                    <span class="btn__text">Play Now</span>
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#arrow-circle" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="slider-game__slide">
+                            <a href class="slider-game__link">
+                                <picture>
+                                    <source media="(min-width:991px)" srcset="/img/games/game_2.png">
+                                    <img class="slider-game__img" src="/img/games/game_2_mob.png" alt="Play Now">
+                                </picture>
+                                <div class="btn btn--small slider-game__btn">
+                                    <span class="btn__text">Play Now</span>
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#arrow-circle" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="slider-game__slide">
+                            <a href class="slider-game__link">
+                                <picture>
+                                    <source media="(min-width:991px)" srcset="/img/games/game_3.png">
+                                    <img class="slider-game__img" src="/img/games/game_1_mob.png" alt="Play Now">
+                                </picture>
+                                <div class="btn btn--small slider-game__btn">
+                                    <span class="btn__text">Play Now</span>
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#arrow-circle" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="slider-game__slide">
+                            <a href class="slider-game__link">
+                                <picture>
+                                    <source media="(min-width:991px)" srcset="/img/games/game_4.png">
+                                    <img class="slider-game__img" src="/img/games/game_2_mob.png" alt="Play Now">
+                                </picture>
+                                <div class="btn btn--small slider-game__btn">
+                                    <span class="btn__text">Play Now</span>
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#arrow-circle" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="slider-game__slide">
+                            <a href class="slider-game__link">
+                                <picture>
+                                    <source media="(min-width:991px)" srcset="/img/games/game_5.png">
+                                    <img class="slider-game__img" src="/img/games/game_1_mob.png" alt="Play Now">
+                                </picture>
+                                <div class="btn btn--small slider-game__btn">
+                                    <span class="btn__text">Play Now</span>
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#arrow-circle" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="slider-game__slide">
+                            <a href class="slider-game__link">
+                                <picture>
+                                    <source media="(min-width:991px)" srcset="/img/games/game_4.png">
+                                    <img class="slider-game__img" src="/img/games/game_2_mob.png" alt="Play Now">
+                                </picture>
+                                <div class="btn btn--small slider-game__btn">
+                                    <span class="btn__text">Play Now</span>
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#arrow-circle" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="slider-game__slide">
+                            <a href class="slider-game__link">
+                                <picture>
+                                    <source media="(min-width:991px)" srcset="/img/games/game_5.png">
+                                    <img class="slider-game__img" src="/img/games/game_1_mob.png" alt="Play Now">
+                                </picture>
+                                <div class="btn btn--small slider-game__btn">
+                                    <span class="btn__text">Play Now</span>
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#arrow-circle" />
+                                    </svg>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="slider-game__nav js--slider-games-nav">
+                        <!-- <div class="slider-game__nav-btn slider-game__nav-btn--prev js-slider-game-games-prev">
+                            <svg class="slider-game__nav-icon slider-game__nav-icon--prev">
+                                <use xlink:href="#arrow-big" />
+                            </svg>
+                        </div>
+    
+                        <div class="slider-game__nav-btn slider-game__nav-btn--next js-slider-game-games-next">
+                            <svg class="slider-game__nav-icon slider-game__nav-icon--next">
+                                <use xlink:href="#arrow-big" />
+                            </svg>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="section__btn section__btn--center">
+                    <button class="btn btn--red btn--long">
+                        <span class="btn__text">Explore Our Games</span>
+                        <svg class="btn__icon">
+                            <use xlink:href="#arrow-circle" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section about-us" id="about_us">
+            <div class="container">
+                <div class="about-us__content">
+                    <h2 class="section__title">
+                        Fun at<br />
+                        <span class="clr-red">First Play</span>
+                    </h2>
+
+                    <p class="section__description">
+                        Beach Bum was born in 2015 out of genuine passion for gaming and technology. The global gaming
+                        company
+                        is focused on classic hit card and board games played everywhere. In October 2021, Beach Bum was
+                        acquired by hyper-casual gaming leader Voodoo, opening the door to countless new opportunities.
+                        With
+                        famous hit titles like Lord of the Board, Spades Royale, Gin Rummy Stars, Domino Go and Rummy
+                        Rush,
+                        Beach Bum entertains millions of players worldwide.
+                    </p>
+
+                    <div class="section__btn">
+                        <button class="btn btn--red">About Us</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section life" id="life_at_the_beach">
+            <div class="life__container">
+                <div class="life__wrapper">
+                    <div class="photo-slider life__slider">
+                        <div class="photo-slider-wrapper js-slider-life">
+                            <div class="photo-slider__item">
+                                <img src="img/images/photo_1.png" alt="life_at_the_beach_photo_1"
+                                    class="photo-slider__img">
+                            </div>
+
+                            <div class="photo-slider__item">
+                                <img src="img/images/photo_2.png" alt="life_at_the_beach_photo_2"
+                                    class="photo-slider__img">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="life__content">
+                        <h2 class="section__title clr-white">
+                            Life at<br> the Beach
+                        </h2>
+
+                        <p class="section__description clr-white">
+                            When your career is all about filling people’s lives with fun and entertainment, it’s no
+                            wonder work
+                            becomes the best beach party in town.
+                        </p>
+
+                        <div class="section__btn life__btn">
+                            <button class="btn btn--white-orange">
+                                <span class="btn__text">Check it out</span>
+                                <svg class="btn__icon">
+                                    <use xlink:href="#arrow-circle" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section seaside-scoop" id="seaside_scoop">
+            <div class="seaside-scoop__container">
+                <div class="seaside-scoop__slider card-slider js-seaside-scoop-slider">
+                    <div class="card-slider__item">
+                        <h2 class="card-slider__title clr-white hide-xs">
+                            Seaside Scoop
+                        </h2>
+                        <div class="card-slider__content">
+                            <div class="card-slider__img">
+                                <img class="card-slider__photo" src="img/images/photo_2.png">
+                            </div>
+                            
+                            <div class="card-slider__description">
+                                <h2 class="card-slider__title clr-white hide-sm hide-lg hide-md">
+                                    Seaside Scoop
+                                </h2>
+                                <p class="section__description">
+                                    We couldn't be more excited to share the happy news about our acquisition by Voodoo.io!
+                                    We
+                                    can't wait for everything we're about to achieve together. So, Beach Bums, let's
+                                    celebrate
+                                    and keep doing that voodoo that we do so well!
+                                </p>
+                                <button class="card-slider__btn btn btn--red hide-xs">
+                                    <span class="btn__text">Read more</span>
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#arrow-circle" />
+                                    </svg>
+                                </button>
+                                <button class="card-slider__btn btn btn--white-red hide-sm hide-md hide-lg">
+                                    <span class="btn__text">Read more</span>
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#arrow-circle" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-slider__item">
+                        <h2 class="card-slider__title clr-white hide-xs">
+                            Seaside Scoop
+                        </h2>
+                        <div class="card-slider__content">
+                            <div class="card-slider__img">
+                                <img class="card-slider__photo" src="img/images/photo_1.png">
+                            </div>
+                            <div class="card-slider__description">
+                                <h2 class="card-slider__title clr-white hide-sm hide-lg hide-md">
+                                    Seaside Scoop
+                                </h2>
+                                <p class="section__description">
+                                    We couldn't be more excited to share the happy news about our acquisition by Voodoo.io!
+                                    We
+                                    can't wait for everything we're about to achieve together. So, Beach Bums, let's
+                                    celebrate
+                                    and keep doing that voodoo that we do so well!
+                                </p>
+                                <button class="card-slider__btn btn btn--red hide-xs">
+                                    <span class="btn__text">Read more</span>
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#arrow-circle" />
+                                    </svg>
+                                </button>
+
+                                <button class="btn btn--white-red hide-sm hide-md hide-lg">
+                                    <span class="btn__text">Read more</span>
+                                    <svg class="btn__icon">
+                                        <use xlink:href="#arrow-circle" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section career" id="careers">
+            <div class="container">
+                <h2 class="section__title">
+                    Enjoy the <span class="clr-red">Beach Life</span>
+                </h2>
+
+                <div class="section__btn">
+                    <button class="btn btn--white-red ">
+                        <span class="btn__text">Join Us</span>
+                        <svg class="btn__icon">
+                            <use xlink:href="#arrow-circle" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer" id="footer">
+            <div class="container">
+                <div class="footer__wrapper">
+                    <div class="footer__logo-block">
+                        <img src="img/logo_sm.svg" alt="BeachBum" class="footer__logo">
+                    </div>
+
+                    <div class="footer__nav footer-nav">
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__title js-accordion-title">Company
+                                <svg class="footer-nav__title-icon hide-sm hide-md hide-lg">
+                                    <use xlink:href="#cross"></use>
+                                </svg>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="javascript:void(0)" class="footer-nav__link">About Us</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="javascript:void(0)" class="footer-nav__link">Our Games</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="javascript:void(0)" class="footer-nav__link">Newsroom</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="javascript:void(0)" class="footer-nav__link">Careers</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="javascript:void(0)" class="footer-nav__link">Life at the Beach</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="javascript:void(0)" class="footer-nav__link">Contact</a>
+                            </li>
+                        </ul>
+
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__title js-accordion-title">Terms & Policies
+                                <svg class="footer-nav__title-icon hide-sm hide-md hide-lg">
+                                    <use xlink:href="#cross"></use>
+                                </svg>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="javascript:void(0)" class="footer-nav__link">Privacy Policy</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="javascript:void(0)" class="footer-nav__link">Terms & Services</a>
+                            </li>
+                        </ul>
+
+                        <ul class="footer-nav__list">
+                            <li class="footer-nav__title js-accordion-title">Game Support
+                                <svg class="footer-nav__title-icon hide-sm hide-md hide-lg">
+                                    <use xlink:href="#cross"></use>
+                                </svg>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="javascript:void(0)" class="footer-nav__link">Lord of the Board</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="javascript:void(0)" class="footer-nav__link">Spades Royale</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="javascript:void(0)" class="footer-nav__link">Rummy Stars</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="javascript:void(0)" class="footer-nav__link">Domino Go</a>
+                            </li>
+                            <li class="footer-nav__item">
+                                <a href="javascript:void(0)" class="footer-nav__link">Rummy Rush</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__links">
+                        <a href="#careers" class="footer__btn">
+                            Careers
+                        </a>
+
+                        <div class="footer__socials socials">
+                            <a href="https://www.instagram.com/" class="socials__link btn-circle">
+                                <span class="socials__icon">
+                                    <svg width="14" height="14">
+                                        <use xlink:href="#instagram" />
+                                    </svg>
+                                </span>
+                            </a>
+    
+                            <a href="https://www.facebook.com/" class="socials__link btn-circle">
+                                <span class="socials__icon">
+                                    <svg width="6" height="11">
+                                        <use xlink:href="#facebook" />
+                                    </svg>
+                                </span>
+                            </a>
+    
+                            <a href="https://www.linkedin.com/" class="socials__link btn-circle">
+                                <span class="socials__icon">
+                                    <svg width="14" height="14">
+                                        <use xlink:href="#linkedin" />
+                                    </svg>
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <seciton class="copyright">
+            <div class="container">
+                <div class="copyright__wrapper">
+                    <div class="copyright__rights">
+                        ©2023 <span class="clr-orange">Beach</span> <span class="clr-red">Bum</span> Ltd. All Rights
+                        Reserved
+                    </div>
+                    <div class="copyright__made-by">
+                        UX/UI & Development by SITRUS<br>
+                        HTML & CSS by 4yk
+                    </div>
+                </div>
+            </div>
+        </seciton>
+
+        <a href="#top-page" class="btn-to-top">
+            <svg class="btn-to-top__icon" width="24" height="24">
+                <use xlink:href="#arrow-big" />
+            </svg>
+        </a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.4.1/jquery-migrate.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
