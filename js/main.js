@@ -106,9 +106,9 @@ function sliderSeasideScoopInit() {
 }
 
 function footerAccordiont() {
-    if (window.innerWidth <= 768) {
-        const acoordionTitle = $('.js-accordion-title');
+    const acoordionTitle = $('.js-accordion-title');
     
+    if (window.innerWidth <= 768) {
         acoordionTitle.on('click', function() {
             $(this).parent().toggleClass('open');
         })
